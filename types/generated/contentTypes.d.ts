@@ -367,14 +367,16 @@ export interface ApiPostPost extends Schema.CollectionType {
   info: {
     singularName: 'post';
     pluralName: 'posts';
-    displayName: 'Post';
+    displayName: 'post';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    tittle: Attribute.String;
+    title: Attribute.String;
     content: Attribute.RichText;
+    image: Attribute.Media & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
